@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-import Carousel from "../components/Carousel";
+
 
 const Home = () => {
   const [foodCat, setFoodCat] = useState([]);
@@ -10,7 +10,7 @@ const Home = () => {
   const [search,setSearch] = useState("");
 
   const loadData = async () => {
-    let response = await fetch(`https://speedybites-backend.onrender.com/foodData`, {
+    let response = await fetch("https://speedybites-backend.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const Home = () => {
     response = await response.json();
     setFoodItem(response[0]);
     setFoodCat(response[1]);
-    // console.log(response[0],response[1])
+    console.log(response[0],response[1])
   };
 
   useEffect(() => {

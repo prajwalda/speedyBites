@@ -16,7 +16,7 @@ const Cart = () => {
 
   const HandleCheckout =async () => {
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("https://speedybites-backend.onrender.com/orderData",{
+    let response = await fetch("https://speedybites-backend.onrender.com/api/orderData",{
       method:"POST",
       headers: {
         'Content-type': 'application/json'
