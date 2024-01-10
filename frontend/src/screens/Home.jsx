@@ -10,7 +10,7 @@ const Home = () => {
   const [search,setSearch] = useState("");
 
   const loadData = async () => {
-    let response = await fetch(`https://speedybites-backend.onrender.com/api/foodData`, {
+    let response = await fetch(`https://speedybites-backend.onrender.com/foodData`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

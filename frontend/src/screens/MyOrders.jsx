@@ -8,7 +8,7 @@ export default function MyOrder() {
     const fetchMyOrder = async () => {
         try {
             const userEmail = localStorage.getItem('userEmail');
-            let response = await fetch("https://speedybites-backend.onrender.com/api/myorderData", {
+            let response = await fetch("https://speedybites-backend.onrender.com/myorderData", {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json'
