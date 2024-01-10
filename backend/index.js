@@ -11,10 +11,10 @@ app.get("/", (req, res) => {
 });
 
 // Enable CORS for all routes
-app.use(cors({ origin: 'http://localhost:3001' }));
+app.use(cors({ origin: 'https://speedy-bites.vercel.app' }));
 
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3001");
+    res.header("Access-Control-Allow-Origin", "https://speedy-bites.vercel.app");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
